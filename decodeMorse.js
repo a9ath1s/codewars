@@ -58,20 +58,20 @@ const MORSE_CODE = {
   '...---...': 'SOS'
 };
 
-function decodeMorse(morseCode) {
-  words = morseCode.split('   ');
+function decodeMorse ( morseCode ) {
+  words = morseCode.split( '   ' );
   res = [];
-  words.forEach(word => {
-    chars = word.split(' ');
+  words.forEach( word => {
+    chars = word.split( ' ' );
     var dWord = [];
-    chars.forEach(char => {
-      dWord.push(MORSE_CODE[char]);
-    });
-    res.push(dWord.join(''));
-  });
+    chars.forEach( char => {
+      dWord.push( MORSE_CODE[ char ] );
+    } );
+    res.push( dWord.join( '' ) );
+  } );
 
-  return res.join(' ').trim();
+  return res.join( ' ' ).trim();
 }
 
-console.log(MORSE_CODE['-.--']);
-console.log(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE');
+console.log( MORSE_CODE[ '-.--' ] );
+console.log( decodeMorse( '.... . -.--   .--- ..- -.. .' ), 'HEY JUDE' );
